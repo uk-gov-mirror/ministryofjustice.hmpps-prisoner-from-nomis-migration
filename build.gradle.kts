@@ -41,7 +41,7 @@ dependencies {
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8")
   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk9")
 
-  implementation("io.opentelemetry:opentelemetry-extension-kotlin:1.62.0")
+  implementation("io.opentelemetry:opentelemetry-extension-kotlin:1.65.0")
 
   runtimeOnly("org.postgresql:r2dbc-postgresql:1.1.2.RELEASE")
   // Pin scram for CVE-2026-53712 whilst waiting for postgresql 1.1.3
@@ -53,19 +53,19 @@ dependencies {
   runtimeOnly("org.postgresql:postgresql:42.7.13")
   runtimeOnly("org.flywaydb:flyway-database-postgresql")
 
-  testImplementation("uk.gov.justice.service.hmpps:hmpps-kotlin-spring-boot-starter-test:3.0.0")
+  testImplementation("uk.gov.justice.service.hmpps:hmpps-kotlin-spring-boot-starter-test:3.0.1")
   testImplementation("org.springframework.boot:spring-boot-starter-data-r2dbc-test")
   testImplementation("org.springframework.boot:spring-boot-starter-webflux-test")
-  testImplementation("io.swagger.parser.v3:swagger-parser:2.1.45") {
+  testImplementation("io.swagger.parser.v3:swagger-parser:2.1.47") {
     exclude(group = "io.swagger.core.v3")
   }
-  testImplementation("io.swagger.core.v3:swagger-core-jakarta:2.2.52")
+  testImplementation("io.swagger.core.v3:swagger-core-jakarta:2.2.54")
 
   testImplementation("org.wiremock:wiremock-standalone:3.13.2")
   testImplementation("org.testcontainers:localstack:1.21.4")
-  testImplementation("com.amazonaws:aws-java-sdk-core:1.12.796")
+  testImplementation("com.amazonaws:aws-java-sdk-core:1.12.797")
   testImplementation("org.awaitility:awaitility-kotlin:4.3.0")
-  testImplementation("org.testcontainers:testcontainers-postgresql:2.0.1")
+  testImplementation("org.testcontainers:testcontainers-postgresql:2.0.5")
   testImplementation("io.mockk:mockk:1.14.7")
   testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
 }
